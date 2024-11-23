@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  header {
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  h1.sub-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  h2.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  h3.sub-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  pre {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  code .string { color: #ce9178; } /* string color */
+  code .number { color: #b5cea8; } /* number color */
+  code .boolean { color: #569cd6; } /* boolean color */
+  code .null { color: #569cd6; } /* null color */
+  code .key { color: #9cdcfe; } /* key color */

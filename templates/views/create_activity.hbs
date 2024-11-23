@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Activity - BugMaster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #ff6b6b;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #007bff;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #d63384;
+      font-size: 1rem;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      overflow: auto;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    .example {
+      background: #e9f7ff;
+      border-left: 4px solid #007bff;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Create Activity</h1>
+    <p>API Documentation for the <code>POST /create-activity</code> endpoint</p>
+  </header>
+  <main>
+    <h2>Endpoint: <code>POST /create-activity</code></h2>
+    <p>The <code>/create-activity</code> route is designed to allow users to create new activities in the BugMaster system. While this is an evolving prototype, its main purpose is to provide the foundation for activity creation, ensuring that each activity is unique and includes the necessary metadata for deployment.</p>
+
+    <h3>How to Use This Endpoint:</h3>
+    <ul>
+      <li>Send a <code>POST</code> request to <code>/create-activity</code>.</li>
+      <li>Include a unique <code>activityID</code> in the request body. This will serve as the identifier for the activity.</li>
+      <li>Once the activity is successfully created, the server will return a deployment URL where the activity can be accessed or further managed.</li>
+    </ul>
+
+    <h3>Request Body Example:</h3>
+    <pre>
+{
+  "activityID": "unique-activity-id"
+}
+    </pre>
+
+    <h3>Expected Response:</h3>
+    <p>If the request is valid, the server responds with the deployment URL for the created activity:</p>
+    <pre>
+{
+  "deployURL": "https://bugmaster.onrender.com/fetch-activity/unique-activity-id"
+}
+    </pre>
+
+    <div class="example">
+      <strong>Example Request Using HTTPie:</strong>
+      <pre>
+http POST https://bugmaster.onrender.com/create-activity activityID="unique-activity-id"
+      </pre>
+    </div>
+
+    <h3>Error Handling:</h3>
+    <ul>
+      <li><strong>400 Bad Request:</strong> If the <code>activityID</code> is missing or invalid.
+        <pre>
+{
+  "message": "It's required an activity id."
+}
+        </pre>
+      </li>
+      <li><strong>400 Bad Request:</strong> If an activity with the same <code>activityID</code> already exists.
+        <pre>
+{
+  "message": "Activity already exists."
+}
+        </pre>
+      </li>
+    </ul>
+
+    <h3>Purpose of the Endpoint:</h3>
+    <p>The purpose of the <code>/create-activity</code> endpoint is to lay the groundwork for a robust activity creation process. Future improvements may include:</p>
+    <ul>
+      <li>Allowing users to specify additional details about the activity, such as name, description, and parameters.</li>
+      <li>Integrating dynamic validation for activity data.</li>
+      <li>Supporting persistent storage of activities in a database.</li>
+      <li>Ensuring compatibility with BugMaster's deployment and analytics systems.</li>
+    </ul>
+
+    <h3>Notes:</h3>
+    <p>This is a prototype implementation, and the logic and features of the endpoint are subject to change as the system evolves.</p>
+  </main>
+  <footer>
+    <p>🐞 BugMaster - Simplifying QA Management</p>
+  </footer>
+</body>
+</html>

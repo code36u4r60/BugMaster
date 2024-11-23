@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuração de Atividade - BugMaster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #ff6b6b;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .hidden {
+      display: none;
+    }
+    .button-container {
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: not-allowed;
+    }
+    button:enabled {
+      cursor: pointer;
+      background-color: #28a745;
+    }
+    button:hover:enabled {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Configuração de Atividade</h1>
+  <form>
+    <label for="activity_name">Nome da Atividade:</label>
+    <input type="text" id="activity_name" name="activity_name" placeholder="Insira o nome da atividade">
+
+    <label for="bug_scenario">Cenário de Bugs:</label>
+    <textarea id="bug_scenario" name="bug_scenario" rows="3" placeholder="Descreva o cenário de bugs"></textarea>
+
+    <label for="description">Descrição Geral:</label>
+    <textarea id="description" name="description" rows="3" placeholder="Insira uma descrição geral da atividade"></textarea>
+
+    <label for="severity_levels">Níveis de Severidade:</label>
+    <select id="severity_levels" name="severity_levels" multiple>
+      <option value="low">Baixo</option>
+      <option value="medium">Médio</option>
+      <option value="high">Alto</option>
+      <option value="critical">Crítico</option>
+    </select>
+
+    <label for="priority_levels">Níveis de Prioridade:</label>
+    <select id="priority_levels" name="priority_levels" multiple>
+      <option value="low">Baixa</option>
+      <option value="medium">Média</option>
+      <option value="high">Alta</option>
+    </select>
+
+    <label for="test_params">Parâmetros de Teste:</label>
+    <textarea id="test_params" name="test_params" rows="3" placeholder="Insira os parâmetros de teste separados por vírgula"></textarea>
+
+    <!-- Campos ocultos -->
+    <input type="hidden" name="activityType" value="bug_tracking">
+
+    <!-- Botão desativado -->
+    <div class="button-container">
+      <button disabled>Enviar 🚀</button>
+    </div>
+  </form>
+</body>
+</html>
