@@ -14,6 +14,7 @@ export class ActivityDB {
     return ActivityDB.instance;
   }
 
+// Métodos para manipular os dados...
   create(activity) {
     this.data.push(activity);
   }
