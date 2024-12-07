@@ -24,12 +24,12 @@
     "uuid": "^11.0.3",
     "validator": "13.12.0",
     "yargs": "^17.7.2",
-    "zod": "^3.23.8"
-  },
-  "devDependencies": {
+    "zod": "^3.23.8",
     "@babel/cli": "^7.26.4",
     "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-env": "^7.26.0"
+  },
+  "devDependencies": {
     "jest": "^29.7.0",
     "nodemon": "^3.0.1"
   }
