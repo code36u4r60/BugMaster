@@ -8,18 +8,20 @@ import { FetchAllAnalytics } from './core/Analytics/FetchAllAnalytics.js';
 import { ListAnalytics } from './core/Analytics/ListAnalytics.js';
 
 // Controllers
-import ActivityController from '/controller/Activity/ActivityController.js';
-
-
+import ActivityController from './controller/Activity/ActivityController.js';
 
 
 const app = express()
 app.use(express.json());
 
-// Define paths for Express config
-const publicDirectoryPath = path.join(import.meta.dirname, '../public')
-const viewsPath = path.join(import.meta.dirname, '../templates/views')
-const partialsPath = path.join(import.meta.dirname, '../templates/partials')
+
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const publicDirectoryPath = path.join(__dirname, '../public')
+const viewsPath = path.join(__dirname, '../templates/views')
+const partialsPath = path.join(__dirname, '../templates/partials')
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs')
