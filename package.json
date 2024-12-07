@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "type": "module",
+  "engines": {
+    "node": "23.1.0"
+  },
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js -V -e js,hbs",
