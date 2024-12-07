@@ -8,7 +8,7 @@ import { FetchAllAnalytics } from './core/Analytics/FetchAllAnalytics.js';
 import { ListAnalytics } from './core/Analytics/ListAnalytics.js';
 
 // Controllers
-import ActivityController from './controller/Activity/ActivityController.js';
+import ActivityController from '/controller/Activity/ActivityController.js';
 
 
 
