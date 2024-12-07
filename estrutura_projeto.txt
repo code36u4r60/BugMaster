@@ -1,0 +1,55 @@
+[ 448]  .
+├── [   0]  estrutura_projeto.txt
+├── [  67]  jest.config.js
+├── [192K]  package-lock.json
+├── [ 889]  package.json
+├── [ 160]  public
+│   ├── [  96]  css
+│   │   └── [1.3K]  style.css
+│   ├── [  96]  img
+│   │   └── [ 320]  favicon_io
+│   │       ├── [ 378]  about.txt
+│   │       ├── [ 15K]  android-chrome-192x192.png
+│   │       ├── [ 45K]  android-chrome-512x512.png
+│   │       ├── [ 13K]  apple-touch-icon.png
+│   │       ├── [ 763]  favicon-16x16.png
+│   │       ├── [1.8K]  favicon-32x32.png
+│   │       ├── [ 15K]  favicon.ico
+│   │       └── [ 263]  site.webmanifest
+│   └── [  96]  js
+│       └── [   0]  script.js
+├── [  75]  readme.md
+├── [ 256]  src
+│   ├── [3.0K]  app.js
+│   ├── [  96]  controller
+│   │   └── [ 192]  activity
+│   │       ├── [1.6K]  ActivityController.js
+│   │       ├── [ 357]  CreateActivityUseCase.js
+│   │       ├── [ 223]  FetchActivitiesActivitiesUseCase.js
+│   │       └── [ 349]  FetchActivityByIDUseCase.js
+│   ├── [ 128]  core
+│   │   ├── [ 160]  Activity
+│   │   │   ├── [ 986]  CreateActivity.js
+│   │   │   ├── [1.1K]  FetchActivity.js
+│   │   │   └── [1.1K]  ListActivityParams.js
+│   │   └── [ 128]  Analytics
+│   │       ├── [1.7K]  FetchAllAnalytics.js
+│   │       └── [ 486]  ListAnalytics.js
+│   ├── [  96]  db
+│   │   └── [ 874]  ActivityDB.js
+│   └── [ 128]  model
+│       ├── [1.4K]  Activity.js
+│       └── [ 355]  ActivityFactory.js
+├── [ 128]  templates
+│   ├── [  64]  partials
+│   └── [ 224]  views
+│       ├── [1.3K]  404.hbs
+│       ├── [4.3K]  analytics.hbs
+│       ├── [2.8K]  config.hbs
+│       ├── [4.1K]  create_activity.hbs
+│       └── [1.8K]  index.hbs
+└── [  96]  test
+    └── [  96]  models.spec
+        └── [2.7K]  activity.spec.js
+
+19 directories, 34 files
