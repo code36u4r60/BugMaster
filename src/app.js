@@ -35,6 +35,9 @@ app.get('', (req, res) => {
     res.render('index')
 })
 
+app.get('/activity-configuration', (req, res) => {
+    res.render('config')
+})
 
 // Server API 
 /**
